@@ -119,14 +119,14 @@ header {
   }
 
 
-  .cards {
+  .cards, .ratings {
     margin: 50px 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
 
-  .card {
+  .card, .rating {
     border: 1px solid #eee;
     width: 30%;
     padding: 40px;
@@ -156,12 +156,17 @@ header {
   cursor: pointer;
   }
 
-  .cards > h1 {
+  .cards > h1, .ratings > h1 {
     display: block;
     flex: none;
     text-align: center; 
     width: 100%; 
     margin-bottom: 20px; 
+}
+
+.rating {
+  padding: 50px;
+  border: 1px solid #8B5CF6;
 }
 
 /* Footer */
