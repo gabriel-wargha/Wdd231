@@ -1,0 +1,183 @@
+/* Header ------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    margin-left: 40px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    color: #8B5CF6;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.logo .icon {
+    font-size: 1.5rem;
+    margin-right: 8px;
+  }
+
+  .logo .bold {
+    font-weight: 700;
+  }
+
+.nav {
+    margin-left: 0;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.auth-buttons {
+  margin-right: 40px;
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 12px; /* Adds spacing between buttons */
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+  padding: 8px 16px; /* Ensures consistent padding */
+  border-radius: 8px; /* Ensures consistent border radius */
+  text-align: center; /* Centers text inside buttons */
+  display: flex; /* Makes buttons flex containers */
+  align-items: center; /* Centers text vertically inside buttons */
+  justify-content: center; /* Centers text horizontally inside buttons */
+}
+
+.auth-buttons .login {
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.auth-buttons .signup {
+  background: black;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+.menu-icon img{
+    margin-left: 15px;
+    cursor: pointer;
+    max-width: 20px;
+  }
+  
+
+
+/* Search form */
+
+main {
+  margin: 150px;
+}
+.search {
+  text-align: center;
+  margin: 10px;
+  color: #8B5CF6;;
+}
+
+#searchForm {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 300px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#searchForm button {
+  background-color: #8B5CF6;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#searchForm button:hover {
+  background-color: #333;
+}
+
+/* Book cards */
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.bookCard {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.bookCard img {
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.bookCard h3 {
+  font-size: 1rem;
+  margin: 0 0 4px;
+}
+
+.bookCard p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+
+.fade-in{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
