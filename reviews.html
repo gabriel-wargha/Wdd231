@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./search.css">
-    <script src="./search.js" defer></script>
-    <script src="./main.js" defer></script>
     <title>Document</title>
+    <link rel="stylesheet" href="./review.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./reviews.js"></script>
 </head>
-
 <body>
+
     <header>
         <div class="logo">
             <img src="./icons/icons8-book-30.png" alt="">
@@ -29,30 +29,32 @@
         </div>
     </header>
 
-
     <main>
-       <div class="search"><h1>Search Books</h1></div> 
-        <form id="searchForm">
-            <input type="text" id="searchInput" placeholder="Search by title or author" required>
-            <button type="submit">Search</button>
+        <div class="review-page">
+        <h1>Write a book Review</h1>
+
+        <form id="reviewForm">
+            <label for="bookTitle">Book Title:</label>
+            <input type="text" id="bookTitle" required />
+
+            <label for="rating">Rating (1 to 5):</label>
+            <input type="number" id="rating" min="1" max="5" required />
+
+            <label for="reviewText">Your Review:</label>
+            <textarea id="reviewText" rows="4" required></textarea>
+
+            <button type="submit">Submit Review</button>
         </form>
 
+        <h2>All Reviews</h2>
+        <ul id="reviewsList"></ul>
 
-        <section id="results"></section>
+         </div>
+
 
     </main>
 
-    <!-- Modal -->
-<div id="bookModal" class="modal hidden">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <img id="modalImage" src="" alt="Book cover">
-        <h2 id="modalTitle"></h2>
-        <h4 id="modalAuthor"></h4>
-        <p id="modalDescription"></p>
-    </div>
 
-</div>
     
 </body>
 </html>

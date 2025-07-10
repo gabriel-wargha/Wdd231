@@ -1,3 +1,5 @@
+import { loginUser } from './authUtils.js';
+
 window.addEventListener('DOMContentLoaded', function () {
 	const loginForm = document.getElementById('loginForm');
 
@@ -7,9 +9,8 @@ window.addEventListener('DOMContentLoaded', function () {
 		const username = document.getElementById('username').value.trim();
 		const password = document.getElementById('password').value;
 
-		const foundUser = users.find(
-			(user) => user.username === username && user.password === password
-		);
+		// **Here you call your new function `loginUser`**
+		const foundUser = loginUser(username, password);
 
 		if (foundUser) {
 			alert('Login successful');

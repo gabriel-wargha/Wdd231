@@ -100,12 +100,20 @@ header {
 /* Search form */
 
 main {
-  margin: 150px;
+  margin: 100px auto;
+  padding: 0 16px;
+  max-width: 1200px;
 }
 .search {
   text-align: center;
   margin: 10px;
   color: #8B5CF6;;
+}
+
+.search h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4b0082;
 }
 
 #searchForm {
@@ -153,8 +161,10 @@ main {
 }
 
 .bookCard img {
-  height: 200px;
-  object-fit: cover;
+  height: auto;
+  max-height: 200px;
+  width: auto;
+  object-fit: contain;
   margin-bottom: 10px;
 }
 
@@ -179,5 +189,94 @@ main {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 10px black;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .bookCard img {
+    height: auto;
+    max-height: 180px;
+    width: auto;
+  }
+
+  #searchForm {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #searchForm input,
+  #searchForm button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    gap: 8px;
+    margin-right: 0;
   }
 }

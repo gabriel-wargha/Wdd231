@@ -1,0 +1,103 @@
+.review-page {
+  background-color: #f7f5ff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-page #reviewForm {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 40px;
+}
+
+.review-page #reviewForm label {
+  font-weight: 600;
+  font-size: 1rem;
+
+}
+
+.review-page #reviewForm input[type="text"],
+.review-page #reviewForm select,
+.review-page #reviewForm textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.review-page #reviewForm input[type="text"]:focus,
+.review-page #reviewForm select:focus,
+.review-page #reviewForm textarea:focus {
+  border-color: #8B5CF6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(139, 92, 246, 0.5);
+}
+
+/* Botão enviar */
+.review-page #reviewForm button {
+  background-color: #8B5CF6;
+  color: white;
+  font-weight: 700;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.review-page #reviewForm button:hover {
+  background-color: #6b3dc1;
+}
+
+.review-page #reviewsList {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 500px;
+  list-style: none;
+  padding: 0;
+}
+
+.review-page #reviewsList li {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  margin-bottom: 16px;
+  text-align: left;
+  line-height: 1.4;
+  color: #444;
+}
+
+.review-page #reviewsList li strong {
+  font-size: 1.1rem;
+  color: #8B5CF6;
+}
+
+.review-page #reviewsList li em {
+  font-style: normal;
+  color: #666;
+  margin-top: 6px;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.review-page > h1, .review-page > h2 {
+  margin-bottom: 10px/* test if the rule applies */
+}
+

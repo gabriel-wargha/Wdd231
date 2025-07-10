@@ -104,6 +104,7 @@ header {
   .hero-section {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     gap: 100px;
   }
   
@@ -111,9 +112,25 @@ header {
     flex: 1;
   }
 
+  .hero-content{
+   flex: 1 1 0;
+  padding: 32px;
+  box-sizing: border-box;
+
+  }
+.hero-image {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;   /* vertically center content */
+  justify-content: center; /* horizontally center content */
+  /* Optionally add padding */
+  padding: 32px;
+  box-sizing: border-box;
+}
+
   .hero-section .hero-image img {
-    width: 70%;
-    height: 50%;
+    max-width: 800px;
+    max-height: 500px;
     object-fit: cover;
     align-self: center;
   }
