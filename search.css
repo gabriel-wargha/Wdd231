@@ -59,22 +59,30 @@ header {
     color: black;
 }
 
+.logo a {
+  text-decoration: none;
+  color: #8B5CF6;
+}
+
+.nav a:hover {
+  color: #8B5CF6;
+}
 .auth-buttons {
   margin-right: 40px;
   display: flex;
-  align-items: center; /* Ensures vertical alignment */
-  justify-content: center; /* Centers the buttons horizontally */
-  gap: 12px; /* Adds spacing between buttons */
+  align-items: center;
+  justify-content: center;
+  gap: 12px; 
 }
 
 .auth-buttons .login,
 .auth-buttons .signup {
-  padding: 8px 16px; /* Ensures consistent padding */
-  border-radius: 8px; /* Ensures consistent border radius */
-  text-align: center; /* Centers text inside buttons */
-  display: flex; /* Makes buttons flex containers */
-  align-items: center; /* Centers text vertically inside buttons */
-  justify-content: center; /* Centers text horizontally inside buttons */
+  padding: 8px 16px;
+  border-radius: 8px; 
+  text-align: center; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
 
 .auth-buttons .login {

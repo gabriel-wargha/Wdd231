@@ -21,6 +21,15 @@ header {
     border-bottom: 1px solid #eee;
 }
 
+.logo a {
+  text-decoration: none;
+  color: #8B5CF6;
+}
+
+.nav a:hover {
+  color: #8B5CF6;
+}
+
 .logo {
     margin-left: 40px;
     margin-top: 15px;
@@ -189,7 +198,17 @@ header {
 /* Footer */
 
 footer {
-  display: grid;
-  grid-template-columns: auto 1fr 140px;
-  background-color: rgb(241, 243, 250);
+  width: 100vw;
+  background: #8B5CF6;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-top: 24px;
+}
+
+footer a {
+  color: white;
+  padding: 30px;
 }
