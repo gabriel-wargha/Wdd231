@@ -16,6 +16,25 @@ document.addEventListener('DOMContentLoaded', function () {
 		modalAuthor.textContent = `By: ${book.authors}`;
 		modalImage.src = book.thumbnail;
 		modalDescription.textContent = book.description;
+
+		const viewBtn = document.createElement('button');
+		viewBtn.textContent = 'View Details';
+		viewBtn.classList.add('view-button');
+
+		viewBtn.onclick = () => {
+			const url = `book.html?title=${encodeURIComponent(
+				book.title
+			)}&author=${encodeURIComponent(book.authors)}&desc=${encodeURIComponent(
+				book.description
+			)}&img=${encodeURIComponent(book.thumbnail)}`;
+			window.location.href = url;
+			window.location.href = url;
+		};
+
+		const modalFooter = document.getElementById('modalFooter');
+		modalFooter.innerHTML = ''; // Clear old buttons
+		modalFooter.appendChild(viewBtn);
+
 		modal.classList.remove('hidden');
 	}
 

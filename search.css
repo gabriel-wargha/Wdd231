@@ -131,7 +131,7 @@ main {
   font-size: 1rem;
 }
 
-#searchForm button {
+#searchForm button, .view-button {
   background-color: #8B5CF6;
   color: white;
   padding: 10px 16px;

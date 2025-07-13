@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./search.css">
-    <script src="./search.js" defer></script>
-    <script src="./main.js" defer></script>
+    <script type="module" src="./js/search.js"></script>
+    <script type="./main.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -22,14 +22,8 @@
                 <li><a href="./reviews.html">Reviews</a></li>
         </div>
 
-        <div class="auth-buttons">
-            <button class="login">Log in</button>
-            <button class="signup">Sign Up</button>
-            <span class="menu-icon"> <img src="./icons/icons8-computer-50.png" alt=""></span>
-        </div>
     </header>
-
-
+    
     <main>
        <div class="search"><h1>Search Books</h1></div> 
         <form id="searchForm">
@@ -50,6 +44,8 @@
         <h2 id="modalTitle"></h2>
         <h4 id="modalAuthor"></h4>
         <p id="modalDescription"></p>
+
+        <div id="modalFooter"></div>
     </div>
 
 </div>

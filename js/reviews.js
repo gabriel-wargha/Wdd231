@@ -1,21 +1,12 @@
+import { loadReviews, saveReviews, renderReviews } from './reviewUtils.js';
+
 document.addEventListener('DOMContentLoaded', function () {
 	const form = document.getElementById('reviewForm');
 	const reviewsList = document.getElementById('reviewsList');
 
-	let reviews = JSON.parse(localStorage.getItem('bookReviews') || '[]');
+	let reviews = loadReviews();
 
-	function renderReviews() {
-		reviewsList.innerHTML = '';
-
-		reviews.forEach((review) => {
-			const li = document.createElement('li');
-			li.innerHTML = `
-        <strong>${review.book}</strong> - ⭐ ${review.rating}/5<br>
-        <em>${review.text}</em>
-      `;
-			reviewsList.appendChild(li);
-		});
-	}
+	renderReviews(reviews, reviewsList);
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
@@ -32,11 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		const newReview = { book, rating, text };
 		reviews.push(newReview);
 
-		localStorage.setItem('bookReviews', JSON.stringify(reviews));
+		saveReviews(reviews);
 
-		renderReviews();
+		renderReviews(reviews, reviewsList);
 
 		form.reset();
 	});
-	renderReviews();
 });
