@@ -8,18 +8,19 @@
 }
 
 body {
-    display: flex;
     font-family: 'Inter', sans-serif;
-    align-items: center;
-    justify-content: center;
 }
 
 main {
     text-align: center;
-    color:#8B5CF6;
+    color: #8B5CF6;
     padding: 30px;
     width: fit-content;
     max-width: 700px;
+    margin: 40px auto 0 auto; /* center main horizontally */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 }
 
 main h1, p {
