@@ -3,109 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Search form */
 
 body {
-    font-family: 'Inter', sans-serif;
-    text-align: center;
+  background-color: #f7f5ff;
 }
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 32px;
-    background-color: white;
-    border-bottom: 1px solid #eee;
-}
-
-.logo {
-    margin-left: 40px;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    color: #8B5CF6;
-    font-weight: 600;
-    font-size: 1.25rem;
-}
-
-.logo .icon {
-    font-size: 1.5rem;
-    margin-right: 8px;
-  }
-
-  .logo .bold {
-    font-weight: 700;
-  }
-
-.nav {
-    margin-left: 0;
-}
-
-.nav ul {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    list-style: none;
-}
-
-.nav a {
-    text-decoration: none;
-    color: black;
-}
-
-.logo a {
-  text-decoration: none;
-  color: #8B5CF6;
-}
-
-.nav a:hover {
-  color: #8B5CF6;
-}
-.auth-buttons {
-  margin-right: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px; 
-}
-
-.auth-buttons .login,
-.auth-buttons .signup {
-  padding: 8px 16px;
-  border-radius: 8px; 
-  text-align: center; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-}
-
-.auth-buttons .login {
-  background: white;
-  color: black;
-  border: 1px solid #ccc;
-}
-
-.auth-buttons .signup {
-  background: black;
-  color: white;
-  border: 1px solid #ccc;
-}
-
-.menu-icon img{
-    margin-left: 15px;
-    cursor: pointer;
-    max-width: 20px;
-  }
-  
-
-
-/* Search form */
 
 main {
   margin: 100px auto;
@@ -288,4 +190,3 @@ main {
     margin-right: 0;
   }
 }
-

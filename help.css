@@ -1,0 +1,41 @@
+.help-section {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.help-section h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.help-section p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.help-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.help-section li {
+  background: #f8f8f8;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-left: 4px solid #3366cc;
+  border-radius: 4px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.help-section a {
+  color: #3366cc;
+  text-decoration: underline;
+}
