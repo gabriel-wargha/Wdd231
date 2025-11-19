@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,9 +25,11 @@
         </div>
 
     </header>
-    
+
     <main>
-       <div class="search"><h1>Search Books</h1></div> 
+        <div class="search">
+            <h1>Search Books</h1>
+        </div>
         <form id="searchForm">
             <input type="text" id="searchInput" placeholder="Search by title or author" required>
             <button type="submit">Search</button>
@@ -35,19 +38,23 @@
 
         <section id="results"></section>
 
-    </main>
-</div>
+        <h2>My Book List</h2>
+        <ul id="bookList"></ul>
 
-<div id="bookModal" class="modal hidden">
-  <div class="modal-content">
-    <span class="close-button">&times;</span>
-    <h2 id="modalTitle"></h2>
-    <h3 id="modalAuthor"></h3>
-    <img id="modalImage" src="" alt="Book cover" />
-    <p id="modalDescription"></p>
-    <div id="modalFooter"></div>
-  </div>
-</div>
-    
+    </main>
+    </div>
+
+    <div id="bookModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <h3 id="modalAuthor"></h3>
+            <img id="modalImage" src="" alt="Book cover" />
+            <p id="modalDescription"></p>
+            <div id="modalFooter"></div>
+        </div>
+    </div>
+
 </body>
+
 </html>
