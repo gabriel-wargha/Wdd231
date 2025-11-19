@@ -1,23 +1,26 @@
-import { loginUser } from './authUtils.js';
+// login.js
+import { login, onAuthStateChanged } from './auth.js';
 
-window.addEventListener('DOMContentLoaded', function () {
-	const loginForm = document.getElementById('loginForm');
+document.addEventListener('DOMContentLoaded', () => {
+	const form = document.getElementById('loginForm');
+	if (!form) return;
 
-	loginForm.addEventListener('submit', function (event) {
-		event.preventDefault();
+	// Redirect if already logged in
+	onAuthStateChanged((user) => {
+		if (user) window.location.href = 'index.html';
+	});
 
-		const username = document.getElementById('username').value.trim();
+	form.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const email = document.getElementById('username').value.trim();
 		const password = document.getElementById('password').value;
 
-		// **Here you call your new function `loginUser`**
-		const foundUser = loginUser(username, password);
-
-		if (foundUser) {
-			alert('Login successful');
-			localStorage.setItem('loggedInUser', JSON.stringify(foundUser));
-			window.location.href = 'index.html';
-		} else {
-			alert('Incorrect username or password');
+		try {
+			await login(email, password);
+			// Redirect handled by listener above
+		} catch (err) {
+			alert(err.message || 'Login failed');
+			console.error(err);
 		}
 	});
 });

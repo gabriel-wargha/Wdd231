@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./form.css">
     <script type="module" src="./js/register.js"></script>
 </head>
+
 <body>
 
     <h1>Create an Account</h1>
@@ -21,6 +23,13 @@
 
         <button type="submit">Register</button>
     </form>
-    
+
+    <!-- Firebase SDKs: must load FIRST -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+
 </body>
+
 </html>

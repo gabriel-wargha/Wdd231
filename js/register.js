@@ -1,20 +1,27 @@
-import { registerUser } from './authUtils.js';
-window.addEventListener('DOMContentLoaded', function () {
-	const registerForm = document.getElementById('registerForm');
+// register.js
+import { register } from './auth.js';
 
-	registerForm.addEventListener('submit', function (event) {
-		event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+	const form = document.getElementById('registerForm');
+	if (!form) return;
 
-		const username = document.getElementById('username').value.trim();
+	form.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		const email = document.getElementById('username').value.trim();
 		const password = document.getElementById('password').value;
 
-		const result = registerUser(username, password);
+		if (!email || password.length < 6) {
+			alert('Use a valid email and at least 6 characters for password.');
+			return;
+		}
 
-		if (result.success) {
-			alert(result.message);
+		try {
+			await register(email, password);
+			alert('Registered — please log in');
 			window.location.href = 'login.html';
-		} else {
-			alert(result.message);
+		} catch (err) {
+			alert(err.message || 'Registration failed');
+			console.error(err);
 		}
 	});
 });
